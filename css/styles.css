@@ -1,48 +1,88 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+body {
     height: 100vh;
-    width: 100vw;
-    max-height: 800px;
-    max-width: 1280px;
-    min-height: 600px;
-    min-width: 1000px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.card {
-    height: 379px;
-    width: 600px;
-    background: #808080;
-    border-radius: 10px;
-    transition: background 0.8s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12vw;
+    text-transform: uppercase;
     overflow: hidden;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
-.card1 {
-    background: url("../img/alhsw.hover.png") center center no-repeat;
-    background-size: 300px;
+.disappear {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    bottom: 0;
+    top: 0;
 }
 
-.card1:hover {
-    background: url("../img/alhsw.png") left center no-repeat;
-    background-size: 600px;
+.disappear span {
+    display: inline-block;
+    color: transparent;
+    text-shadow: 0px 0px 0px black;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-h2 {
-    color: rgba(0, 0, 0, 0)
+.disappear span:nth-child(1) {
+    animation-name: disappearleft;
 }
 
-h2 {
-    opacity: 1;
+.disappear span:nth-child(2) {
+    animation-name: disappearleft;
+    animation-delay: .3s;
 }
 
-.fa {
-    opacity: 1;
+.disappear span:nth-child(3) {
+    animation-name: disappearight;
+    animation-delay: .6s;
+}
+
+.disappear span:nth-child(4) {
+    animation-name: disappearleft;
+    animation-delay: .8s;
+}
+
+.disappear span:nth-child(5) {
+    animation-name: disappearight;
+    animation-delay: 1s;
+}
+
+.disappear span:nth-child(6) {
+    animation-name: disappearight;
+    animation-delay: 1.3s;
+}
+
+.disappear span:nth-child(7) {
+    animation-name: disappearleft;
+    animation-delay: 1.6s;
+}
+
+.disappear span:nth-child(8) {
+    animation-name: disappearight;
+    animation-delay: 2s;
+}
+
+.disappear span:nth-child(9) {
+    animation-name: disappearight;
+    animation-delay: 2.3s;
+}
+
+@keyframes disappearleft {
+    50% {
+        transform: skew(50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes disappearight {
+    50% {
+        transform: skew(-50deg) translateY(-200%);
+        text-shadow: 0px 0px 50px;
+        opacity: 0;
+    }
 }
