@@ -4,11 +4,596 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ialex.haus</title>
+    <title>IALEX.HAUS</title>
     <style>
         @font-face {
-            font-family: octicons-link;
-            src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+            font-family: "Segoe UI", Helvetica, sans-serif;
+            margin: 0px;
+            overflow-y: auto;
+        }
+        
+        .markdown-body .octicon {
+            display: inline-block;
+            fill: currentColor;
+            vertical-align: text-bottom;
+        }
+        
+        .markdown-body .anchor {
+            float: left;
+            line-height: 1;
+            margin-left: -20px;
+            padding-right: 4px;
+        }
+        
+        .markdown-body .anchor:focus {
+            outline: none;
+        }
+        
+        .markdown-body h1 .octicon-link,
+        .markdown-body h2 .octicon-link,
+        .markdown-body h3 .octicon-link,
+        .markdown-body h4 .octicon-link,
+        .markdown-body h5 .octicon-link,
+        .markdown-body h6 .octicon-link {
+            color: #1b1f23;
+            vertical-align: middle;
+            visibility: hidden;
+        }
+        
+        .markdown-body h1:hover .anchor,
+        .markdown-body h2:hover .anchor,
+        .markdown-body h3:hover .anchor,
+        .markdown-body h4:hover .anchor,
+        .markdown-body h5:hover .anchor,
+        .markdown-body h6:hover .anchor {
+            text-decoration: none;
+        }
+        
+        .markdown-body h1:hover .anchor .octicon-link,
+        .markdown-body h2:hover .anchor .octicon-link,
+        .markdown-body h3:hover .anchor .octicon-link,
+        .markdown-body h4:hover .anchor .octicon-link,
+        .markdown-body h5:hover .anchor .octicon-link,
+        .markdown-body h6:hover .anchor .octicon-link {
+            visibility: visible;
+        }
+        
+        .markdown-body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #24292e;
+            line-height: 1.5;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+            font-size: 16px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .markdown-body .pl-c {
+            color: #6a737d;
+        }
+        
+        .markdown-body .pl-c1,
+        .markdown-body .pl-s .pl-v {
+            color: #005cc5;
+        }
+        
+        .markdown-body .pl-e,
+        .markdown-body .pl-en {
+            color: #6f42c1;
+        }
+        
+        .markdown-body .pl-s .pl-s1,
+        .markdown-body .pl-smi {
+            color: #24292e;
+        }
+        
+        .markdown-body .pl-ent {
+            color: #22863a;
+        }
+        
+        .markdown-body .pl-k {
+            color: #d73a49;
+        }
+        
+        .markdown-body .pl-pds,
+        .markdown-body .pl-s,
+        .markdown-body .pl-s .pl-pse .pl-s1,
+        .markdown-body .pl-sr,
+        .markdown-body .pl-sr .pl-cce,
+        .markdown-body .pl-sr .pl-sra,
+        .markdown-body .pl-sr .pl-sre {
+            color: #032f62;
+        }
+        
+        .markdown-body .pl-smw,
+        .markdown-body .pl-v {
+            color: #e36209;
+        }
+        
+        .markdown-body .pl-bu {
+            color: #b31d28;
+        }
+        
+        .markdown-body .pl-ii {
+            background-color: #b31d28;
+            color: #fafbfc;
+        }
+        
+        .markdown-body .pl-c2 {
+            background-color: #d73a49;
+            color: #fafbfc;
+        }
+        
+        .markdown-body .pl-c2:before {
+            content: "^M";
+        }
+        
+        .markdown-body .pl-sr .pl-cce {
+            color: #22863a;
+            font-weight: 700;
+        }
+        
+        .markdown-body .pl-ml {
+            color: #735c0f;
+        }
+        
+        .markdown-body .pl-mh,
+        .markdown-body .pl-mh .pl-en,
+        .markdown-body .pl-ms {
+            color: #005cc5;
+            font-weight: 700;
+        }
+        
+        .markdown-body .pl-mi {
+            color: #24292e;
+            font-style: italic;
+        }
+        
+        .markdown-body .pl-mb {
+            color: #24292e;
+            font-weight: 700;
+        }
+        
+        .markdown-body .pl-md {
+            background-color: #ffeef0;
+            color: #b31d28;
+        }
+        
+        .markdown-body .pl-mi1 {
+            background-color: #f0fff4;
+            color: #22863a;
+        }
+        
+        .markdown-body .pl-mc {
+            background-color: #ffebda;
+            color: #e36209;
+        }
+        
+        .markdown-body .pl-mi2 {
+            background-color: #005cc5;
+            color: #f6f8fa;
+        }
+        
+        .markdown-body .pl-mdr {
+            color: #6f42c1;
+            font-weight: 700;
+        }
+        
+        .markdown-body .pl-ba {
+            color: #586069;
+        }
+        
+        .markdown-body .pl-sg {
+            color: #959da5;
+        }
+        
+        .markdown-body .pl-corl {
+            color: #032f62;
+            text-decoration: underline;
+        }
+        
+        .markdown-body details {
+            display: block;
+        }
+        
+        .markdown-body summary {
+            display: list-item;
+        }
+        
+        .markdown-body a {
+            background-color: transparent;
+        }
+        
+        .markdown-body a:active,
+        .markdown-body a:hover {
+            outline-width: 0;
+        }
+        
+        .markdown-body strong {
+            font-weight: inherit;
+            font-weight: bolder;
+        }
+        
+        .markdown-body h1 {
+            font-size: 2em;
+            margin: .67em 0;
+        }
+        
+        .markdown-body img {
+            border-style: none;
+        }
+        
+        .markdown-body code,
+        .markdown-body kbd,
+        .markdown-body pre {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+        
+        .markdown-body hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+        
+        .markdown-body input {
+            font: inherit;
+            margin: 0;
+        }
+        
+        .markdown-body input {
+            overflow: visible;
+        }
+        
+        .markdown-body [type=checkbox] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        
+        .markdown-body * {
+            box-sizing: border-box;
+        }
+        
+        .markdown-body input {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+        
+        .markdown-body a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        .markdown-body a:hover {
+            text-decoration: underline;
+        }
+        
+        .markdown-body strong {
+            font-weight: 600;
+        }
+        
+        .markdown-body hr {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #dfe2e5;
+            height: 0;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .markdown-body hr:before {
+            content: "";
+            display: table;
+        }
+        
+        .markdown-body hr:after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+        
+        .markdown-body table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        .markdown-body td,
+        .markdown-body th {
+            padding: 0;
+        }
+        
+        .markdown-body details summary {
+            cursor: pointer;
+        }
+        
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        
+        .markdown-body h1 {
+            font-size: 32px;
+        }
+        
+        .markdown-body h1,
+        .markdown-body h2 {
+            font-weight: 600;
+        }
+        
+        .markdown-body h2 {
+            font-size: 24px;
+        }
+        
+        .markdown-body h3 {
+            font-size: 20px;
+        }
+        
+        .markdown-body h3,
+        .markdown-body h4 {
+            font-weight: 600;
+        }
+        
+        .markdown-body h4 {
+            font-size: 16px;
+        }
+        
+        .markdown-body h5 {
+            font-size: 14px;
+        }
+        
+        .markdown-body h5,
+        .markdown-body h6 {
+            font-weight: 600;
+        }
+        
+        .markdown-body h6 {
+            font-size: 12px;
+        }
+        
+        .markdown-body p {
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .markdown-body blockquote {
+            margin: 0;
+        }
+        
+        .markdown-body ol,
+        .markdown-body ul {
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-left: 0;
+        }
+        
+        .markdown-body ol ol,
+        .markdown-body ul ol {
+            list-style-type: lower-roman;
+        }
+        
+        .markdown-body ol ol ol,
+        .markdown-body ol ul ol,
+        .markdown-body ul ol ol,
+        .markdown-body ul ul ol {
+            list-style-type: lower-alpha;
+        }
+        
+        .markdown-body dd {
+            margin-left: 0;
+        }
+        
+        .markdown-body code,
+        .markdown-body pre {
+            font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+            font-size: 12px;
+        }
+        
+        .markdown-body pre {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        
+        .markdown-body input::-webkit-inner-spin-button,
+        .markdown-body input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        
+        .markdown-body .border {
+            border: 1px solid #e1e4e8!important;
+        }
+        
+        .markdown-body .border-0 {
+            border: 0!important;
+        }
+        
+        .markdown-body .border-bottom {
+            border-bottom: 1px solid #e1e4e8!important;
+        }
+        
+        .markdown-body .rounded-1 {
+            border-radius: 3px!important;
+        }
+        
+        .markdown-body .bg-white {
+            background-color: #fff!important;
+        }
+        
+        .markdown-body .bg-gray-light {
+            background-color: #fafbfc!important;
+        }
+        
+        .markdown-body .text-gray-light {
+            color: #6a737d!important;
+        }
+        
+        .markdown-body .mb-0 {
+            margin-bottom: 0!important;
+        }
+        
+        .markdown-body .my-2 {
+            margin-bottom: 8px!important;
+            margin-top: 8px!important;
+        }
+        
+        .markdown-body .pl-0 {
+            padding-left: 0!important;
+        }
+        
+        .markdown-body .py-0 {
+            padding-bottom: 0!important;
+            padding-top: 0!important;
+        }
+        
+        .markdown-body .pl-1 {
+            padding-left: 4px!important;
+        }
+        
+        .markdown-body .pl-2 {
+            padding-left: 8px!important;
+        }
+        
+        .markdown-body .py-2 {
+            padding-bottom: 8px!important;
+            padding-top: 8px!important;
+        }
+        
+        .markdown-body .pl-3,
+        .markdown-body .px-3 {
+            padding-left: 16px!important;
+        }
+        
+        .markdown-body .px-3 {
+            padding-right: 16px!important;
+        }
+        
+        .markdown-body .pl-4 {
+            padding-left: 24px!important;
+        }
+        
+        .markdown-body .pl-5 {
+            padding-left: 32px!important;
+        }
+        
+        .markdown-body .pl-6 {
+            padding-left: 40px!important;
+        }
+        
+        .markdown-body .f6 {
+            font-size: 12px!important;
+        }
+        
+        .markdown-body .lh-condensed {
+            line-height: 1.25!important;
+        }
+        
+        .markdown-body .text-bold {
+            font-weight: 600!important;
+        }
+        
+        .markdown-body:before {
+            content: "";
+            display: table;
+        }
+        
+        .markdown-body:after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+        
+        .markdown-body>:first-child {
+            margin-top: 0!important;
+        }
+        
+        .markdown-body>:last-child {
+            margin-bottom: 0!important;
+        }
+        
+        .markdown-body a:not([href]) {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .markdown-body blockquote,
+        .markdown-body dl,
+        .markdown-body ol,
+        .markdown-body p,
+        .markdown-body pre,
+        .markdown-body table,
+        .markdown-body ul {
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+        
+        .markdown-body hr {
+            background-color: #e1e4e8;
+            border: 0;
+            height: .25em;
+            margin: 24px 0;
+            padding: 0;
+        }
+        
+        .markdown-body blockquote {
+            border-left: .25em solid #dfe2e5;
+            color: #6a737d;
+            padding: 0 1em;
+        }
+        
+        .markdown-body blockquote>:first-child {
+            margin-top: 0;
+        }
+        
+        .markdown-body blockquote>:last-child {
+            margin-bottom: 0;
+        }
+        
+        .markdown-body kbd {
+            background-color: #fafbfc;
+            border: 1px solid #c6cbd1;
+            border-bottom-color: #959da5;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #959da5;
+            color: #444d56;
+            display: inline-block;
+            font-size: 11px;
+            line-height: 10px;
+            padding: 3px 5px;
+            vertical-align: middle;
+        }
+        
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 16px;
+            margin-top: 24px;
+        }
+        
+        .markdown-body h1 {
+            font-size: 2em;
+        }
+        
+        .markdown-body h1,
+        .markdown-body h2 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: .3em;
+        }
+        
+        .markdown-body h2 {
+            font-size: 1.5em;
         }
         
         .markdown-body .octicon {
@@ -1260,36 +1845,7 @@
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166pt" height="26pt" viewBox="0 0 166 26" fill-rule="evenodd">
-  <defs> 
-<style type="text/css">
-svg path {fill:inherit; stroke:inherit;}
-#logo { fill: #fff;  transition: fill 0.1s; }
-#logo:hover  { fill: #4e86b1; }
-  </style>
-  </defs>
- <a href="https://ialex.haus" target="_blank">
-<g>
-<title>ialex.haus</title>
-<path style="stroke:none; fill:#000000" d="M 35.4 2.5C 35 3.4 35.2 4.6 35.8 5.2C 37.3 6.7 40.2 5.3 39.8 3.3C 39.4 1 36.2 0.4 35.4 2.5z" />
-<path style="stroke:none; fill:#000000" d="M 35 7.6C 35 8.7 35.5 10.1 36.2 10.8C 37.1 11.7 37.1 12.9 36.2 15.8C 33.9 23.3 34.9 25.7 38.9 22.3C 40.6 20.9 40.7 20.4 39.6 18.1C 38.8 16.5 38.6 14.7 39.1 13.5C 40.4 10.1 40.2 6.7 38.6 7.3C 37.9 7.6 36.7 7.3 36.1 6.7C 35.3 5.9 35 6.1 35 7.6z"/>
-<path style="stroke:none; fill:#000000" d="M 56 15L 56 21L 59.3 20.9C 61.6 20.8 61.9 20.6 60.3 20.3C 58.2 19.9 58 19.3 58 14.4C 58 11.4 57.6 9 57 9C 56.4 9 56 11.7 56 15z"/>
-<path style="stroke:none; fill:#000000" d="M 65 15C 65 20.9 65 21 67.8 20.9C 69.4 20.8 69.8 20.6 68.8 20.3C 67.4 19.9 67 18.8 67 14.4C 67 11.4 66.6 9 66 9C 65.4 9 65 11.7 65 15z"/>
-<path style="stroke:none; fill:#000000" d="M 74.8 12.2C 75.7 14 76.8 15.7 77.1 16C 77.4 16.3 78.2 17.5 78.9 18.7C 79.5 20 80.5 21 81 21C 81.5 21 81 19.4 79.9 17.5C 78.1 14.5 78 13.7 79.1 12.2C 80.4 10.7 80.3 10.6 78.8 11.8C 77.4 12.9 77 12.8 76 11.1C 75.4 9.9 74.5 9 74 9C 73.5 9 73.9 10.5 74.8 12.2z"/>
-<path style="stroke:none; fill:#000000" d="M 90 15C 90 18.3 90.4 21 91 21C 91.6 21 92 18.3 92 15C 92 11.7 91.6 9 91 9C 90.4 9 90 11.7 90 15z"/>
-<path style="stroke:none; fill:#000000" d="M 98 15C 98 18.3 98.4 21 99 21C 99.6 21 100 18.3 100 15C 100 11.7 99.6 9 99 9C 98.4 9 98 11.7 98 15z"/>
-<path style="stroke:none; fill:#000000" d="M 107 9.7C 107 10.3 106.7 11.7 106.4 12.7C 105.9 14.2 106 14.2 106.9 13C 107.9 11.6 108.1 11.9 108 14.5C 107.9 15.6 111.2 21.2 111.6 20.8C 112.1 20.2 109 10.8 107.9 9.5C 107.3 9 107 9 107 9.7z"/>
-<path style="stroke:none; fill:#000000" d="M 115 13.8C 115 19.1 116.2 21 119.7 21C 122.6 21 124 18.2 123.8 12.8C 123.7 8.9 123.6 8.8 123.3 12C 122.7 18.5 122 20 120 20C 117.4 20 115.7 16.6 116.2 12.4C 116.4 10.5 116.2 9 115.8 9C 115.4 9 115 11.2 115 13.8z"/>
-<path style="stroke:none; fill:#000000" d="M 127.6 10.5C 127.3 11.3 128.1 13.2 129.4 14.7C 130.7 16.3 132 18.2 132.3 19C 132.7 20.1 132.9 19.9 132.9 18.4C 133 17.3 132.1 15.5 130.9 14.4C 129.8 13.4 129.1 11.8 129.3 10.8C 129.9 8.6 128.5 8.4 127.6 10.5z"/>
-<path style="stroke:none; fill:#000000" d="M 47 10.8C 47 11.2 47.4 12 47.9 12.5C 48.4 13.1 49.3 15.2 50 17.2C 50.6 19.3 51.6 21 52.2 21C 52.7 21 53 20.7 52.8 20.2C 52.7 19.8 51.7 17.4 50.6 14.7C 49 10.6 47 8.5 47 10.8z"/>
-<path style="stroke:none; fill:#000000" d="M 45.5 16.1C 44.4 17.7 45.4 18 46.8 16.4C 47.5 15.6 47.6 15 47.1 15C 46.6 15 45.8 15.5 45.5 16.1z"/>
-<path style="stroke:none; fill:#000000" d="M 104.1 18C 103.5 19.8 103.5 21 104.1 21C 104.6 21 105 20.2 105 19.2C 105 18.2 105.5 16.9 106.2 16.2C 107 15.4 107 15 106.3 15C 105.7 15 104.7 16.3 104.1 18z"/>
-<path style="stroke:none; fill:#000000" d="M 84.4 17.1C 83.6 18.5 86.2 20.2 87.4 19C 88.3 18.1 87.4 16 86 16C 85.5 16 84.8 16.5 84.4 17.1z"/>
-<path style="stroke:none; fill:#000000" d="M 74 19C 73.4 20.1 73.2 21 73.4 21C 73.7 21 74.4 20.1 75 19C 75.6 17.9 75.8 17 75.6 17C 75.3 17 74.6 17.9 74 19z"/>
-<path style="stroke:none; fill:#000000" d="M 127.8 20.7C 128.4 20.9 129.6 20.9 130.3 20.7C 130.9 20.4 130.4 20.2 129 20.2C 127.6 20.2 127.1 20.4 127.8 20.7z"/>
-</g>
- </a>
-</svg>
+    <img scr="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTY2cHQiIGhlaWdodD0iMjZwdCIgdmlld0JveD0iMCAwIDE2NiAyNiIKICBmaWxsLXJ1bGU9ImV2ZW5vZGQiICA+CiAgPGRlZnM+IAo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgpzdmcgcGF0aCB7ZmlsbDppbmhlcml0OyBzdHJva2U6aW5oZXJpdDt9CiNsb2dvIHsgZmlsbDogI2ZmZjsgIHRyYW5zaXRpb246IGZpbGwgMC4xczsgfQojbG9nbzpob3ZlciAgeyBmaWxsOiAjNGU4NmIxOyB9CgogIDwvc3R5bGU+CiAgPC9kZWZzPgogPGEgaHJlZj0iaHR0cHM6Ly9pYWxleC5oYXVzIiB0YXJnZXQ9Il9ibGFuayI+CjxnPgo8dGl0bGU+aWFsZXguaGF1czwvdGl0bGU+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojMDAwMDAwIiBkPSJNIDM1LjQgMi41QyAzNSAzLjQgMzUuMiA0LjYgMzUuOCA1LjJDIDM3LjMgNi43IDQwLjIgNS4zIDM5LjggMy4zQyAzOS40IDEgMzYuMiAwLjQgMzUuNCAyLjV6IiAvPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IGZpbGw6IzAwMDAwMCIgZD0iTSAzNSA3LjZDIDM1IDguNyAzNS41IDEwLjEgMzYuMiAxMC44QyAzNy4xIDExLjcgMzcuMSAxMi45IDM2LjIgMTUuOEMgMzMuOSAyMy4zIDM0LjkgMjUuNyAzOC45IDIyLjNDIDQwLjYgMjAuOSA0MC43IDIwLjQgMzkuNiAxOC4xQyAzOC44IDE2LjUgMzguNiAxNC43IDM5LjEgMTMuNUMgNDAuNCAxMC4xIDQwLjIgNi43IDM4LjYgNy4zQyAzNy45IDcuNiAzNi43IDcuMyAzNi4xIDYuN0MgMzUuMyA1LjkgMzUgNi4xIDM1IDcuNnoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gNTYgMTVMIDU2IDIxTCA1OS4zIDIwLjlDIDYxLjYgMjAuOCA2MS45IDIwLjYgNjAuMyAyMC4zQyA1OC4yIDE5LjkgNTggMTkuMyA1OCAxNC40QyA1OCAxMS40IDU3LjYgOSA1NyA5QyA1Ni40IDkgNTYgMTEuNyA1NiAxNXoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gNjUgMTVDIDY1IDIwLjkgNjUgMjEgNjcuOCAyMC45QyA2OS40IDIwLjggNjkuOCAyMC42IDY4LjggMjAuM0MgNjcuNCAxOS45IDY3IDE4LjggNjcgMTQuNEMgNjcgMTEuNCA2Ni42IDkgNjYgOUMgNjUuNCA5IDY1IDExLjcgNjUgMTV6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojMDAwMDAwIiBkPSJNIDc0LjggMTIuMkMgNzUuNyAxNCA3Ni44IDE1LjcgNzcuMSAxNkMgNzcuNCAxNi4zIDc4LjIgMTcuNSA3OC45IDE4LjdDIDc5LjUgMjAgODAuNSAyMSA4MSAyMUMgODEuNSAyMSA4MSAxOS40IDc5LjkgMTcuNUMgNzguMSAxNC41IDc4IDEzLjcgNzkuMSAxMi4yQyA4MC40IDEwLjcgODAuMyAxMC42IDc4LjggMTEuOEMgNzcuNCAxMi45IDc3IDEyLjggNzYgMTEuMUMgNzUuNCA5LjkgNzQuNSA5IDc0IDlDIDczLjUgOSA3My45IDEwLjUgNzQuOCAxMi4yeiIvPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IGZpbGw6IzAwMDAwMCIgZD0iTSA5MCAxNUMgOTAgMTguMyA5MC40IDIxIDkxIDIxQyA5MS42IDIxIDkyIDE4LjMgOTIgMTVDIDkyIDExLjcgOTEuNiA5IDkxIDlDIDkwLjQgOSA5MCAxMS43IDkwIDE1eiIvPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IGZpbGw6IzAwMDAwMCIgZD0iTSA5OCAxNUMgOTggMTguMyA5OC40IDIxIDk5IDIxQyA5OS42IDIxIDEwMCAxOC4zIDEwMCAxNUMgMTAwIDExLjcgOTkuNiA5IDk5IDlDIDk4LjQgOSA5OCAxMS43IDk4IDE1eiIvPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IGZpbGw6IzAwMDAwMCIgZD0iTSAxMDcgOS43QyAxMDcgMTAuMyAxMDYuNyAxMS43IDEwNi40IDEyLjdDIDEwNS45IDE0LjIgMTA2IDE0LjIgMTA2LjkgMTNDIDEwNy45IDExLjYgMTA4LjEgMTEuOSAxMDggMTQuNUMgMTA3LjkgMTUuNiAxMTEuMiAyMS4yIDExMS42IDIwLjhDIDExMi4xIDIwLjIgMTA5IDEwLjggMTA3LjkgOS41QyAxMDcuMyA5IDEwNyA5IDEwNyA5Ljd6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojMDAwMDAwIiBkPSJNIDExNSAxMy44QyAxMTUgMTkuMSAxMTYuMiAyMSAxMTkuNyAyMUMgMTIyLjYgMjEgMTI0IDE4LjIgMTIzLjggMTIuOEMgMTIzLjcgOC45IDEyMy42IDguOCAxMjMuMyAxMkMgMTIyLjcgMTguNSAxMjIgMjAgMTIwIDIwQyAxMTcuNCAyMCAxMTUuNyAxNi42IDExNi4yIDEyLjRDIDExNi40IDEwLjUgMTE2LjIgOSAxMTUuOCA5QyAxMTUuNCA5IDExNSAxMS4yIDExNSAxMy44eiIvPgo8cGF0aCBzdHlsZT0ic3Ryb2tlOm5vbmU7IGZpbGw6IzAwMDAwMCIgZD0iTSAxMjcuNiAxMC41QyAxMjcuMyAxMS4zIDEyOC4xIDEzLjIgMTI5LjQgMTQuN0MgMTMwLjcgMTYuMyAxMzIgMTguMiAxMzIuMyAxOUMgMTMyLjcgMjAuMSAxMzIuOSAxOS45IDEzMi45IDE4LjRDIDEzMyAxNy4zIDEzMi4xIDE1LjUgMTMwLjkgMTQuNEMgMTI5LjggMTMuNCAxMjkuMSAxMS44IDEyOS4zIDEwLjhDIDEyOS45IDguNiAxMjguNSA4LjQgMTI3LjYgMTAuNXoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gNDcgMTAuOEMgNDcgMTEuMiA0Ny40IDEyIDQ3LjkgMTIuNUMgNDguNCAxMy4xIDQ5LjMgMTUuMiA1MCAxNy4yQyA1MC42IDE5LjMgNTEuNiAyMSA1Mi4yIDIxQyA1Mi43IDIxIDUzIDIwLjcgNTIuOCAyMC4yQyA1Mi43IDE5LjggNTEuNyAxNy40IDUwLjYgMTQuN0MgNDkgMTAuNiA0NyA4LjUgNDcgMTAuOHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gNDUuNSAxNi4xQyA0NC40IDE3LjcgNDUuNCAxOCA0Ni44IDE2LjRDIDQ3LjUgMTUuNiA0Ny42IDE1IDQ3LjEgMTVDIDQ2LjYgMTUgNDUuOCAxNS41IDQ1LjUgMTYuMXoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gMTA0LjEgMThDIDEwMy41IDE5LjggMTAzLjUgMjEgMTA0LjEgMjFDIDEwNC42IDIxIDEwNSAyMC4yIDEwNSAxOS4yQyAxMDUgMTguMiAxMDUuNSAxNi45IDEwNi4yIDE2LjJDIDEwNyAxNS40IDEwNyAxNSAxMDYuMyAxNUMgMTA1LjcgMTUgMTA0LjcgMTYuMyAxMDQuMSAxOHoiLz4KPHBhdGggc3R5bGU9InN0cm9rZTpub25lOyBmaWxsOiMwMDAwMDAiIGQ9Ik0gODQuNCAxNy4xQyA4My42IDE4LjUgODYuMiAyMC4yIDg3LjQgMTlDIDg4LjMgMTguMSA4Ny40IDE2IDg2IDE2QyA4NS41IDE2IDg0LjggMTYuNSA4NC40IDE3LjF6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojMDAwMDAwIiBkPSJNIDc0IDE5QyA3My40IDIwLjEgNzMuMiAyMSA3My40IDIxQyA3My43IDIxIDc0LjQgMjAuMSA3NSAxOUMgNzUuNiAxNy45IDc1LjggMTcgNzUuNiAxN0MgNzUuMyAxNyA3NC42IDE3LjkgNzQgMTl6Ii8+CjxwYXRoIHN0eWxlPSJzdHJva2U6bm9uZTsgZmlsbDojMDAwMDAwIiBkPSJNIDEyNy44IDIwLjdDIDEyOC40IDIwLjkgMTI5LjYgMjAuOSAxMzAuMyAyMC43QyAxMzAuOSAyMC40IDEzMC40IDIwLjIgMTI5IDIwLjJDIDEyNy42IDIwLjIgMTI3LjEgMjAuNCAxMjcuOCAyMC43eiIvPgo8L2c+CiA8L2E+Cjwvc3ZnPgog">
     <article class="markdown-body">
         <h1 class="atx" id="vse-kliniki">ВСЕ КЛИНИКИ</h1>
         <h2 class="atx" id="ooo-«klinika-professionalnoj-mediciny»-na-taganke">ООО «Клиника Профессиональной Медицины» на Таганке</h2>
@@ -2986,5 +3542,7 @@ svg path {fill:inherit; stroke:inherit;}
         </ol>
     </article>
 </body>
+
+</html>
 
 </html>
